@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Test Platform</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main class="container">
+        <section id="welcome">
+            <div class="logo">AJAX<span>TEST</span></div>
+            <div class="hero-icon">📝</div>
+            <h1>Bilimingizni sinab ko‘ring!</h1>
+            <p class="subtitle">AJAX texnologiyasi bo‘yicha 30 ta savol. O‘z bilimingizni tekshiring!</p>
+            <div class="info-cards">
+                <div class="info-card"><strong id="questionCount">30</strong><span>ta savol</span></div>
+                <div class="info-card"><strong>4</strong><span>ta variant</span></div>
+                <div class="info-card"><strong>30</strong><span>daqiqalik reyting</span></div>
+            </div>
+            <input type="text" id="userName" placeholder="Ismingizni kiriting" maxlength="30" autocomplete="name">
+            <button id="startBtn" class="primary-btn">Testni boshlash →</button>
+            <p id="welcomeError" class="error-message" role="alert"></p>
+        </section>
+
+        <section id="test" class="hidden">
+            <div class="top-info">
+                <div class="logo">AJAX<span>TEST</span></div>
+                <span id="progressText">1 / 30</span>
+            </div>
+            <div class="progress-bar"><div id="progressFill"></div></div>
+            <h2 id="question"></h2>
+            <div id="answers"></div>
+            <div class="navigation">
+                <button id="prevBtn" class="secondary-btn">← Oldingi</button>
+                <button id="nextBtn" class="primary-btn">Keyingi →</button>
+            </div>
+            <p id="testError" class="error-message" role="alert"></p>
+        </section>
+
+        <section id="result" class="hidden"></section>
+    </main>
+    <script src="/static/script.js" defer></script>
+</body>
+</html>

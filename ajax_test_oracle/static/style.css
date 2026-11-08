@@ -1,0 +1,73 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef6ff, #f8faff, #eafaf5);
+    min-height: 100vh; display: flex; justify-content: center; align-items: center;
+    padding: 20px; color: #26364a;
+}
+.container {
+    width: 100%; max-width: 760px; background: white; padding: 40px;
+    border-radius: 22px; box-shadow: 0 12px 40px rgba(65, 100, 150, .09);
+}
+.hidden { display: none !important; }
+.logo { font-size: 22px; font-weight: bold; color: #334155; letter-spacing: 1px; }
+.logo span { color: #5288e8; }
+#welcome, #result { text-align: center; }
+.hero-icon {
+    width: 85px; height: 85px; margin: 35px auto 20px; background: #edf4ff;
+    border-radius: 25px; display: flex; justify-content: center; align-items: center; font-size: 40px;
+}
+h1 { font-size: 30px; margin-bottom: 15px; color: #24364b; }
+.subtitle { color: #8290a3; line-height: 1.7; max-width: 480px; margin: 0 auto 28px; }
+.info-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 25px; }
+.info-card { background: #f4f7fc; padding: 18px 8px; border-radius: 13px; }
+.info-card strong { display: block; font-size: 25px; color: #5288e8; margin-bottom: 6px; }
+.info-card span { font-size: 12px; color: #8290a3; }
+input {
+    width: 100%; padding: 16px; border: 1px solid #dce5f0; border-radius: 10px;
+    font-size: 16px; outline: none; margin-bottom: 15px;
+}
+input:focus { border-color: #5288e8; }
+button {
+    padding: 14px 22px; border: none; border-radius: 10px; font-size: 15px;
+    cursor: pointer; transition: .2s;
+}
+button:disabled { opacity: .55; cursor: not-allowed; }
+.primary-btn { background: #5288e8; color: white; }
+.primary-btn:hover:not(:disabled) { background: #3e73d0; }
+.secondary-btn { background: #edf2f8; color: #526176; }
+.secondary-btn:hover:not(:disabled) { background: #e0e9f4; }
+#welcome .primary-btn { width: 100%; }
+.top-info { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+#progressText { color: #8290a3; font-weight: bold; }
+.progress-bar { height: 8px; background: #edf1f7; border-radius: 10px; overflow: hidden; margin-bottom: 30px; }
+#progressFill { height: 100%; width: 0; background: #69b9a3; transition: .3s; }
+#question { font-size: 22px; line-height: 1.5; margin-bottom: 25px; }
+#answers { display: flex; flex-direction: column; gap: 12px; }
+.answer {
+    padding: 16px; border: 1px solid #dce5f0; border-radius: 11px; background: white;
+    text-align: left; font-size: 15px; color: #526176; cursor: pointer; transition: .2s;
+}
+.answer:hover { background: #f3f7ff; border-color: #9ab9ee; }
+.answer.selected { background: #eaf2ff; border: 2px solid #5288e8; color: #3268bd; }
+.navigation { display: flex; justify-content: space-between; gap: 12px; margin-top: 28px; }
+#result h2 { margin-bottom: 15px; }
+.result-score { font-size: 48px; font-weight: bold; color: #5288e8; margin: 20px 0; }
+.result-message { color: #8290a3; margin-bottom: 25px; }
+.review-item { text-align: left; padding: 16px; background: #f7f9fc; border-radius: 10px; margin: 12px 0; line-height: 1.6; }
+.correct-text { color: #24966c; margin-top: 8px; }
+.wrong-text { color: #df6868; margin-top: 8px; }
+.ranking { margin-top: 30px; text-align: left; }
+.ranking h2 { margin-bottom: 8px; }
+.ranking-note { color: #8a97a8; font-size: 13px; margin-bottom: 15px; }
+.rank-item { display: flex; justify-content: space-between; align-items: center; padding: 13px; margin-bottom: 8px; background: #f4f7fc; border-radius: 10px; gap: 12px; }
+.rank-score { color: #5288e8; font-weight: bold; white-space: nowrap; }
+.result-buttons { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 25px; }
+.error-message { color: #d94b4b; margin-top: 12px; min-height: 18px; font-size: 14px; }
+.loading { opacity: .65; pointer-events: none; }
+@media (max-width: 550px) {
+    .container { padding: 22px; }
+    h1 { font-size: 24px; }
+    .info-card span { font-size: 10px; }
+    #question { font-size: 19px; }
+}
